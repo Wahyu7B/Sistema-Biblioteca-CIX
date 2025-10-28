@@ -25,7 +25,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario guardar(UsuarioRegistroDTO registroDTO) {
-        Usuario usuario = new Usuario(null, null, null);
+        Usuario usuario = new Usuario();
         usuario.setNombreCompleto(registroDTO.getNombreCompleto());
         usuario.setEmail(registroDTO.getEmail());
         usuario.setPasswordHash(passwordEncoder.encode(registroDTO.getPassword()));
