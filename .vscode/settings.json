@@ -1,4 +1,7 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
-    "maven.view": "hierarchical"
+    "maven.view": "hierarchical",
+    "cSpell.words": [
+        "springframework"
+    ]
 }

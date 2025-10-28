@@ -25,7 +25,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario guardar(UsuarioRegistroDTO registroDTO) {
-        Usuario usuario = new Usuario();
+        Usuario usuario = new Usuario(null, null, null);
         usuario.setNombreCompleto(registroDTO.getNombreCompleto());
         usuario.setEmail(registroDTO.getEmail());
         usuario.setPasswordHash(passwordEncoder.encode(registroDTO.getPassword()));
@@ -34,7 +34,6 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuario.setCreatedAt(LocalDateTime.now());
         usuario.setUpdatedAt(LocalDateTime.now());
         
-        // ✅ LÍNEA CORREGIDA: Faltaba devolver el usuario guardado.
         return usuarioRepository.save(usuario); 
     }
 

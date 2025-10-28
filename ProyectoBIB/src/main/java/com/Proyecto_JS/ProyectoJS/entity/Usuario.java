@@ -50,7 +50,15 @@ public class Usuario {
 
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+
+    public Usuario(Long id, String nombreCompleto, Rol rol) {
+     this(id, nombreCompleto, rol, EstadoUsuario.ACTIVO, nombreCompleto + "@test.com", "hash");
+    }
     
+    public Usuario(Long id2, String nombreCompleto2, Rol rol2, EstadoUsuario activo, String string, String string2) {
+        
+    }
+
     public enum Rol {
         CLIENTE, ADMIN
     }
@@ -146,5 +154,6 @@ public class Usuario {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
+
 
 }
